@@ -1,0 +1,36 @@
+
+.pokemon-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .pokemon-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .pokemon-types {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .type {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    color: white;
+  }
+  
+  .type.fire {
+    background-color: #f08030;
+  }
+  
+  .type.water {
+    background-color: #6890f0;
+  }
+  
+  

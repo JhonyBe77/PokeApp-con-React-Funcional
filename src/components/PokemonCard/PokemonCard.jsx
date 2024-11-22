@@ -1,31 +1,29 @@
 import React from 'react';
 
 const PokemonCard = ({ pokemon }) => {
-
   const weightInKg = pokemon.weight / 10; 
   const heightInM = pokemon.height / 10;
 
   return (
-    <div
-      style={{
-        border: '1px solid #ddd',
-        borderRadius: '8px',
-        padding: '10px',
-        textAlign: 'center',
-        width: '200px',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-      }}
-    >
+    <div className={`pokemon-card ${pokemon.types[0].type.name}`}>
       <img
-        src={pokemon.sprites?.front_default}
+        src={pokemon.sprites?.other['official-artwork'].front_default}
         alt={pokemon.name}
-        style={{ width: '100px', height: '100px' }}
+        className="pokemon-image"
       />
       <h3>{pokemon.name}</h3>
-      <p>ID: {pokemon.id}</p>
-      <p>
-      Peso: {weightInKg} kg | Altura: {heightInM} m
-      </p>
+      <p className="pokemon-id">ID: {pokemon.id}</p>
+      <div className="pokemon-info">
+        <p>Peso: {weightInKg} kg</p>
+        <p>Altura: {heightInM} m</p>
+      </div>
+      <div className="pokemon-types">
+        {pokemon.types.map((type) => (
+          <span key={type.slot} className={`type ${type.type.name}`}>
+            {type.type.name}
+          </span>
+        ))}
+      </div>
     </div>
   );
 };

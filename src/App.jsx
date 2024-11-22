@@ -3,12 +3,10 @@ import SearchForm from './components/SearchForm/SearchForm';
 import PokemonList from './components/PokemonList/PokemonList';
 import './styles/views/_App.scss'; // Importar estilos de App
 
-
 const App = () => {
   const [searchResults, setSearchResults] = useState([]);
 
   const handleSearch = async (query) => {
-    // Comprobamos si el Pokémon ya existe en la lista
     const isAlreadySearched = searchResults.some((pokemon) => pokemon.name.toLowerCase() === query.toLowerCase());
     if (isAlreadySearched) {
       alert('El Pokémon ya está en la lista.');
@@ -16,12 +14,9 @@ const App = () => {
     }
 
     try {
-      // Hacemos la llamada a la API de PokeAPI con el nombre del Pokémon
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${query.toLowerCase()}`);
       if (!response.ok) throw new Error('No se encontró el Pokémon');
       const data = await response.json();
-
-      // Guardamos el Pokémon encontrado en los resultados
       setSearchResults((prevResults) => [...prevResults, data]);
     } catch (error) {
       console.error(error.message);
@@ -30,8 +25,15 @@ const App = () => {
   };
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>Busca tu Pokémon</h1>
+    <div className="app-container">
+      <header className="app-header">
+        <img
+          src="https://i.pinimg.com/originals/34/c1/e5/34c1e5d371d64a581b1902ec5c4509f4.png"
+          alt="Pokémon Logo"
+          className="pokemon-logo"
+        />
+        <h1>Busca tu Pokémon</h1>
+      </header>
       <SearchForm onSearch={handleSearch} />
       <PokemonList pokemons={searchResults} />
     </div>
