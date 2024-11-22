@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import SearchForm from './components/SearchForm/SearchForm';
 import PokemonList from './components/PokemonList/PokemonList';
+import './styles/views/_App.scss'; // Importar estilos de App
+
 
 const App = () => {
   const [searchResults, setSearchResults] = useState([]);
