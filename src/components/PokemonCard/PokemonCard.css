@@ -1,0 +1,59 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.pokemon-card {
+  max-width: 400px;
+  background-color: $light;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  color: $black;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+
+  img {
+    width: 150px;
+    height: 150px;
+    margin: 20px 0;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    color: $primary-color;
+  }
+
+  .details {
+    font-size: 1rem;
+    color: $dark;
+    margin: 10px 0;
+
+    span {
+      display: block;
+      margin: 5px 0;
+    }
+  }
+
+  .types {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+
+    .type {
+      padding: 5px 15px;
+      border-radius: 12px;
+      color: $light;
+      font-weight: bold;
+      text-transform: capitalize;
+
+      &.grass {
+        background-color: #78c850;
+      }
+
+      &.poison {
+        background-color: #a040a0;
+      }
+    }
+  }
+}
