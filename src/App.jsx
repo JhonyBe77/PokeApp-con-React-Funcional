@@ -28,7 +28,7 @@ const App = () => {
     <div className="app-container">
       <header className="app-header">
         <img
-          src="https://i.pinimg.com/originals/34/c1/e5/34c1e5d371d64a581b1902ec5c4509f4.png"
+          src="https://static.vecteezy.com/system/resources/previews/027/127/571/non_2x/pokemon-logo-pokemon-icon-transparent-free-png.png"
           alt="Pokémon Logo"
           className="pokemon-logo"
         />

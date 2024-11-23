@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { debounce } from 'lodash';
+import '../../styles/components/_SearchForm.scss'; 
 
 const SearchForm = ({ onSearch }) => {
   const [inputValue, setInputValue] = useState('');

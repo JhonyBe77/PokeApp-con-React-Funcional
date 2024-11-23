@@ -1,5 +1,6 @@
 import React from 'react';
 import PokemonCard from '../PokemonCard/PokemonCard';
+import '../../styles/components/_PokemonList.scss';
 
 const PokemonList = ({ pokemons }) => {
   return (

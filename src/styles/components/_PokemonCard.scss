@@ -1,7 +1,7 @@
 @import '../../styles/utils/variables';
 
 .pokemon-card {
-  background-color: $light; // Fondo claro por defecto
+  background-color: $light;
   border-radius: $border-radius;
   box-shadow: $box-shadow;
   overflow: hidden;
@@ -125,7 +125,7 @@
   }
 
   .details {
-    background-color: $background-color;
+    background-color: #fff;
     width: 100%;
     padding: 15px;
     color: $text-color;
