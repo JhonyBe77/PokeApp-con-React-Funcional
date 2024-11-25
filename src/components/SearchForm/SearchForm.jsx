@@ -5,19 +5,19 @@ import '../../styles/components/_SearchForm.scss';
 const SearchForm = ({ onSearch }) => {
   const [inputValue, setInputValue] = useState('');
 
-  // Debounce function to handle search
+  // Debounce
   const debouncedSearch = debounce((query) => {
     if (query.trim() === '') {
-      return; // No se realiza búsqueda si el input está vacío
+      return; //si el input está vacío
     }
     onSearch(query);
-  }, 2000); // 2000ms = 2 segundos
+  }, 2000); 
 
   // useEffect para manejar la búsqueda con debounce cada vez que cambie el input
   useEffect(() => {
     debouncedSearch(inputValue);
 
-    // Cleanup para evitar múltiples llamadas en caso de desmontaje
+    // para evitar múltiples llamadas
     return () => {
       debouncedSearch.cancel();
     };
@@ -31,7 +31,7 @@ const SearchForm = ({ onSearch }) => {
   // Maneja el clic en el botón de búsqueda
   const handleSearchClick = () => {
     if (inputValue.trim() !== '') {
-      onSearch(inputValue); // Búsqueda manual al hacer clic en el botón
+      onSearch(inputValue); // Búsqueda haciendo click con el botón
     }
   };
 

@@ -1,3 +1,5 @@
+@import '../utils/_variables';
+
 .app-container {
     display: flex;
     flex-direction: column;
@@ -17,4 +19,39 @@
   .pokemon-logo {
     width: 400px; 
     margin-bottom: 0px; 
+  }
+
+  h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $light;
+  }
+
+  h3 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: $light;
+  }
+
+  h4 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: $black;
+  }
+
+  p {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: $black;
+  }
+
+  span {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: $black;
+  }
+
+  .label {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: $black;
+  }
+
+  .id {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: $black;
   }
